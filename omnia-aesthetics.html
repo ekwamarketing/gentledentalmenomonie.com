@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Omnia Aesthetics | Gentle Dental Menomonie</title>
+  <meta name="description" content="Omnia Aesthetics in Menomonie, WI offers medical-grade facials, dermabrasion, dermaplaning, brow and lash services, head spa, and waxing. Reveal your best skin today.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Fira+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    /* ===== RESET & BASE ===== */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Fira Sans', 'Roboto', 'Ubuntu', 'Cantarell', sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.7;
+      color: #161707;
+      background-color: #ffffff;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      color: #1b315e;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #51b1cc;
+    }
+
+    /* ===== TYPOGRAPHY ===== */
+    h1, h2, h3 {
+      font-family: 'Lora', serif;
+      color: #13293d;
+      line-height: 1.3;
+    }
+
+    h1 {
+      font-size: 36px;
+      font-weight: 500;
+    }
+
+    h2 {
+      font-size: 28px;
+      font-weight: 600;
+    }
+
+    h3 {
+      font-size: 22px;
+      font-weight: 600;
+    }
+
+    p {
+      margin-bottom: 1rem;
+    }
+
+    /* ===== LAYOUT ===== */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .section {
+      padding: 60px 0;
+    }
+
+    /* ===== BUTTONS ===== */
+    .btn {
+      display: inline-block;
+      max-width: 284px;
+      height: 45px;
+      line-height: 45px;
+      padding: 0 30px;
+      border-radius: 25px;
+      font-family: 'Fira Sans', sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: 2px solid #51b1cc;
+    }
+
+    .btn-primary {
+      background-color: #51b1cc;
+      color: #ffffff;
+    }
+
+    .btn-primary:hover {
+      background-color: #ffffff;
+      color: #51b1cc;
+    }
+
+    .btn-outline {
+      background-color: transparent;
+      color: #51b1cc;
+    }
+
+    .btn-outline:hover {
+      background-color: #51b1cc;
+      color: #ffffff;
+    }
+
+    .btn-white {
+      background-color: #ffffff;
+      color: #13293d;
+      border-color: #ffffff;
+    }
+
+    .btn-white:hover {
+      background-color: transparent;
+      color: #ffffff;
+      border-color: #ffffff;
+    }
+
+    /* ===== HERO SECTION ===== */
+    .hero {
+      background: linear-gradient(135deg, #13293d 0%, #1a3a54 40%, #51b1cc 100%);
+      color: #ffffff;
+      padding: 80px 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+
+    .hero h1 {
+      color: #ffffff;
+      font-size: 42px;
+      margin-bottom: 10px;
+    }
+
+    .hero .subtitle {
+      font-family: 'Lora', serif;
+      font-size: 20px;
+      font-weight: 400;
+      color: rgba(255, 255, 255, 0.85);
+      margin-bottom: 25px;
+      font-style: italic;
+    }
+
+    .hero p {
+      font-size: 17px;
+      max-width: 800px;
+      margin: 0 auto 30px;
+      line-height: 1.8;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .hero .btn {
+      margin-top: 10px;
+    }
+
+    /* ===== INTRO SECTION ===== */
+    .intro {
+      background-color: #f8fafb;
+      text-align: center;
+    }
+
+    .intro h2 {
+      margin-bottom: 15px;
+    }
+
+    .intro p {
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 17px;
+      color: #444;
+    }
+
+    /* ===== SERVICES SECTION ===== */
+    .services {
+      background-color: #ffffff;
+    }
+
+    .services h2 {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    .service-card {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 35px 30px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-top: 4px solid transparent;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+      border-top-color: #51b1cc;
+    }
+
+    .service-icon {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, #51b1cc, #639a67);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .service-icon svg {
+      width: 28px;
+      height: 28px;
+      fill: #ffffff;
+    }
+
+    .service-card h3 {
+      margin-bottom: 12px;
+      font-size: 20px;
+    }
+
+    .service-card p {
+      color: #555;
+      font-size: 15px;
+      line-height: 1.7;
+      margin-bottom: 0;
+    }
+
+    /* ===== WHY CHOOSE US ===== */
+    .why-us {
+      background-color: #13293d;
+      color: #ffffff;
+    }
+
+    .why-us-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .why-us h2 {
+      color: #ffffff;
+      margin-bottom: 20px;
+    }
+
+    .why-us .lead {
+      font-size: 17px;
+      color: rgba(255, 255, 255, 0.85);
+      margin-bottom: 30px;
+    }
+
+    .why-us-list {
+      list-style: none;
+    }
+
+    .why-us-list li {
+      position: relative;
+      padding-left: 35px;
+      margin-bottom: 18px;
+      font-size: 16px;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .why-us-list li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 5px;
+      width: 22px;
+      height: 22px;
+      background-color: #51b1cc;
+      border-radius: 50%;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z'/%3E%3C/svg%3E");
+      background-size: 14px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    .why-us-right {
+      text-align: center;
+    }
+
+    .trust-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, rgba(81, 177, 204, 0.15), rgba(99, 154, 103, 0.15));
+      border: 1px solid rgba(81, 177, 204, 0.3);
+      border-radius: 16px;
+      padding: 40px;
+      max-width: 400px;
+    }
+
+    .trust-badge p {
+      font-family: 'Lora', serif;
+      font-size: 20px;
+      font-style: italic;
+      color: rgba(255, 255, 255, 0.9);
+      line-height: 1.6;
+      margin-bottom: 0;
+    }
+
+    /* ===== CTA SECTION ===== */
+    .cta {
+      background: linear-gradient(135deg, #51b1cc 0%, #639a67 100%);
+      color: #ffffff;
+      text-align: center;
+      padding: 70px 0;
+    }
+
+    .cta h2 {
+      color: #ffffff;
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    .cta p {
+      font-size: 17px;
+      max-width: 750px;
+      margin: 0 auto 30px;
+      color: rgba(255, 255, 255, 0.92);
+      line-height: 1.8;
+    }
+
+    /* ===== ANIMATIONS ===== */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .fade-in-delay-1 { transition-delay: 0.1s; }
+    .fade-in-delay-2 { transition-delay: 0.2s; }
+    .fade-in-delay-3 { transition-delay: 0.3s; }
+    .fade-in-delay-4 { transition-delay: 0.4s; }
+    .fade-in-delay-5 { transition-delay: 0.5s; }
+    .fade-in-delay-6 { transition-delay: 0.6s; }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1024px) {
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .why-us-wrapper {
+        gap: 40px;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .hero {
+        padding: 60px 0;
+      }
+
+      .hero h1 {
+        font-size: 30px;
+      }
+
+      .hero .subtitle {
+        font-size: 17px;
+      }
+
+      .hero p {
+        font-size: 15px;
+      }
+
+      h2 {
+        font-size: 24px;
+      }
+
+      h3 {
+        font-size: 20px;
+      }
+
+      .section {
+        padding: 45px 0;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .service-card {
+        padding: 25px 20px;
+      }
+
+      .why-us-wrapper {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .why-us-right {
+        order: -1;
+      }
+
+      .trust-badge {
+        padding: 25px;
+      }
+
+      .cta {
+        padding: 50px 0;
+      }
+
+      .cta h2 {
+        font-size: 26px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="container">
+      <h1 class="fade-in">Welcome to Omnia Aesthetics</h1>
+      <p class="subtitle fade-in fade-in-delay-1">Your destination for glowing skin and renewed confidence</p>
+      <p class="fade-in fade-in-delay-2">
+        From medical-grade facials to waxing and head spa services, we offer treatments designed to help you look refreshed, confident, and naturally radiant. At our Menomonie beauty office, our goal is simple &mdash; help you look and feel your best with care tailored to your unique skin and beauty goals.
+      </p>
+      <a href="#services" class="btn btn-white fade-in fade-in-delay-3">Explore Our Services</a>
+    </div>
+  </section>
+
+  <!-- INTRO SECTION -->
+  <section class="section intro">
+    <div class="container">
+      <h2 class="fade-in">What Aesthetic Services Are Available to Me?</h2>
+      <p class="fade-in fade-in-delay-1">
+        With a personalized approach to beauty, our aesthetic team offers services designed to reveal the best version of you. Explore our aesthetic services and embark on a journey toward a happier, more confident you.
+      </p>
+    </div>
+  </section>
+
+  <!-- SERVICES SECTION -->
+  <section id="services" class="section services">
+    <div class="container">
+      <h2 class="fade-in">Our Aesthetic Services</h2>
+      <div class="services-grid">
+
+        <!-- Facials -->
+        <div class="service-card fade-in fade-in-delay-1">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          </div>
+          <h3>Facials</h3>
+          <p>Refresh and renew your skin with customized facials tailored to your unique skin type and concerns. These treatments cleanse, exfoliate, and hydrate the skin, revealing a smoother, brighter complexion. Some facials also stimulate blood circulation and collagen production, resulting in long-lasting, glowing skin.</p>
+        </div>
+
+        <!-- Dermabrasion -->
+        <div class="service-card fade-in fade-in-delay-2">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58a.49.49 0 0 0 .12-.61l-1.92-3.32a.49.49 0 0 0-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54a.484.484 0 0 0-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96a.49.49 0 0 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.07.62-.07.94s.02.64.07.94l-2.03 1.58a.49.49 0 0 0-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6A3.6 3.6 0 1 1 12 8.4a3.6 3.6 0 0 1 0 7.2z"/></svg>
+          </div>
+          <h3>Dermabrasion</h3>
+          <p>An advanced exfoliating treatment that uses a rotating device to resurface the skin for a younger, smoother appearance. This FDA-cleared treatment can help reduce the appearance of acne scars, uneven skin, age spots, and fine lines. It&rsquo;s an excellent treatment for patients who want noticeable results without surgery or prolonged downtime.</p>
+        </div>
+
+        <!-- Dermaplaning -->
+        <div class="service-card fade-in fade-in-delay-3">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9c.83 0 1.5-.67 1.5-1.5 0-.39-.15-.74-.39-1.01-.23-.26-.38-.61-.38-1 0-.83.67-1.5 1.5-1.5H16c2.76 0 5-2.24 5-5 0-4.42-4.03-8-9-8zm-5.5 9c-.83 0-1.5-.67-1.5-1.5S5.67 9 6.5 9 8 9.67 8 10.5 7.33 12 6.5 12zm3-4C8.67 8 8 7.33 8 6.5S8.67 5 9.5 5s1.5.67 1.5 1.5S10.33 8 9.5 8zm5 0c-.83 0-1.5-.67-1.5-1.5S13.67 5 14.5 5s1.5.67 1.5 1.5S15.33 8 14.5 8zm3 4c-.83 0-1.5-.67-1.5-1.5S16.67 9 17.5 9s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg>
+          </div>
+          <h3>Dermaplaning</h3>
+          <p>A gentle exfoliation treatment that removes dead skin cells and fine facial hair to achieve a brighter complexion and a silky-soft finish. This process instantly smooths the skin and helps skincare products absorb more effectively.</p>
+        </div>
+
+        <!-- Brows & Lashes -->
+        <div class="service-card fade-in fade-in-delay-1">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+          </div>
+          <h3>Brows &amp; Lashes</h3>
+          <p>Enhance your natural features with expert brow and lash services that shape, define, and elevate your look. The goal is simple: beautiful, balanced brows and lashes that frame your face effortlessly.</p>
+        </div>
+
+        <!-- Head Spa -->
+        <div class="service-card fade-in fade-in-delay-2">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.49 9.63c-.18-2.79-1.31-5.51-3.43-7.63a12.188 12.188 0 0 0-3.55 7.63c1.28.68 2.46 1.56 3.49 2.63 1.03-1.06 2.21-1.94 3.49-2.63zm-6.98 0c.18-2.79 1.31-5.51 3.43-7.63A12.188 12.188 0 0 1 8.5 9.63c-1.28.68-2.46 1.56-3.49 2.63 1.03 1.06 2.21 1.94 3.5 2.63zM12 15.45C9.85 12.17 6.18 10 2 10c0 5.32 3.36 9.82 8.03 11.49.63.23 1.29.4 1.97.51.68-.12 1.34-.29 1.97-.51C18.64 19.82 22 15.32 22 10c-4.18 0-7.85 2.17-10 5.45z"/></svg>
+          </div>
+          <h3>Head Spa Services</h3>
+          <p>Indulge in a relaxing scalp and hair treatment designed to detoxify, nourish, and rebalance the scalp. Head spa sessions include scalp analysis, deep cleansing, exfoliation, and a soothing massage to promote healthier hair and scalp. These services help address buildup, dryness, hair thinning, and stress while delivering a deeply calming experience.</p>
+        </div>
+
+        <!-- Waxing -->
+        <div class="service-card fade-in fade-in-delay-3">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 14c-1.66 0-3 1.34-3 3 0 1.31-1.16 2-2 2 .92 1.22 2.49 2 4 2 2.21 0 4-1.79 4-4 0-1.66-1.34-3-3-3zm13.71-9.37l-1.34-1.34a.996.996 0 0 0-1.41 0L9 12.25 11.75 15l8.96-8.96a.996.996 0 0 0 0-1.41z"/></svg>
+          </div>
+          <h3>Waxing Services</h3>
+          <p>Achieve smooth, hair-free skin with professional waxing services for the face, legs, arms, and underarms. High-quality wax and gentle techniques help remove hair from the root, resulting in longer-lasting smoothness and slower regrowth compared to shaving. Whether it&rsquo;s a full arm or leg wax, we design treatment to minimize irritation while leaving your skin soft, clean, and refreshed.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US -->
+  <section class="section why-us">
+    <div class="container">
+      <div class="why-us-wrapper">
+        <div class="why-us-left fade-in">
+          <h2>Professional Care You Can Trust</h2>
+          <p class="lead">Aesthetic treatments require precision and expertise. At Omnia Aesthetics, patient safety and comfort come first.</p>
+          <ul class="why-us-list">
+            <li>Noticeable, natural-looking results</li>
+            <li>Medical-grade skincare products</li>
+            <li>Comfortable treatment experiences</li>
+            <li>Minimally invasive treatments with maximum results</li>
+            <li>Personalized care for every client</li>
+          </ul>
+        </div>
+        <div class="why-us-right fade-in fade-in-delay-2">
+          <div class="trust-badge">
+            <p>You deserve the best skin care. At our office, you receive top-tier aesthetic services in a trusted, comfortable atmosphere.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA SECTION -->
+  <section class="cta">
+    <div class="container">
+      <h2 class="fade-in">Ready to Unveil Your Beautiful Skin?</h2>
+      <p class="fade-in fade-in-delay-1">
+        Beauty is power, and everyone loves to feel confident in their skin. If you are ready to elevate your skin care routine, explore professional aesthetic treatments at Omnia Aesthetics. Conveniently located in Menomonie, Wisconsin, our aesthetic office is a trusted destination for enhancing your natural beauty with minimally invasive treatments. To get started, schedule your appointment today!
+      </p>
+      <a href="tel:" class="btn btn-white fade-in fade-in-delay-2">Schedule Your Appointment</a>
+    </div>
+  </section>
+
+  <!-- JAVASCRIPT -->
+  <script>
+    // Intersection Observer for scroll animations
+    document.addEventListener('DOMContentLoaded', function () {
+      var faders = document.querySelectorAll('.fade-in');
+
+      if ('IntersectionObserver' in window) {
+        var observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, {
+          threshold: 0.15,
+          rootMargin: '0px 0px -50px 0px'
+        });
+
+        faders.forEach(function (el) {
+          observer.observe(el);
+        });
+      } else {
+        // Fallback for older browsers
+        faders.forEach(function (el) {
+          el.classList.add('visible');
+        });
+      }
+
+      // Smooth scroll for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          var target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
